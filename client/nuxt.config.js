@@ -37,6 +37,7 @@ export default {
     '@nuxtjs/bulma',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    '@nuxtjs/auth',
     '@nuxtjs/eslint-module'
   ],
   /*
@@ -44,6 +45,23 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+    baseURL: 'https://jwt-auth.test/api'
+  },
+
+  auth: {
+    strategies: {
+      local: {
+        endpoints: {
+          login: {
+            url: 'login', method: 'post', propertyName: 'meta.token'
+          },
+          user: {
+            url: 'me', method: 'get', propertyName: 'data'
+          },
+          logout: {}
+        }
+      }
+    }
   },
   /*
   ** Build configuration
