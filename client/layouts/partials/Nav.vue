@@ -24,7 +24,7 @@
               </p>
 
               <p class="control">
-                <nuxt-link :to="{ name: 'auth-signup' }" href="#" class="button is-info">
+                <nuxt-link :to="{ name: 'auth-signup' }" class="button is-info">
                   Sign up
                 </nuxt-link>
               </p>
@@ -49,3 +49,13 @@
     </div>
   </nav>
 </template>
+
+<script>
+export default {
+  methods: {
+    logout() {
+      this.$auth.logout()
+    }
+  }
+}
+</script>
