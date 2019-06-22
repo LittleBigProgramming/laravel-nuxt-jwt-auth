@@ -59,7 +59,9 @@ export default {
           user: {
             url: 'me', method: 'get', propertyName: 'data'
           },
-          logout: {}
+          logout: {
+            url: 'logout', method: 'post'
+          }
         }
       }
     }
