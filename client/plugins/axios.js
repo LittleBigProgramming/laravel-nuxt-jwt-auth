@@ -8,6 +8,6 @@ export default function ({ $axios, store }) {
   })
 
   $axios.onRequest(() => {
-    console.log('test')
+    console.log('Request')
   })
 }
