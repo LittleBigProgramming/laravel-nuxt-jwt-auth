@@ -72,7 +72,11 @@ export default {
             url: 'logout', method: 'post'
           }
         }
-      }
+      },
+    },
+    redirect: {
+      login: '/auth/signin',
+      home: '/'
     }
   },
   /*
